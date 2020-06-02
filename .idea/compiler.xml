@@ -2,17 +2,27 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="shiro" />
-        <module name="spring-boot-01" />
+        <module name="kafka-producer" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="kafka-consumer" target="1.8" />
+      <module name="scms-kafka-consumer" target="1.8" />
+      <module name="scms-kafka-producer" target="1.8" />
+      <module name="spring-boot-01" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="kafka-consumer" options="-parameters" />
+      <module name="kafka-producer" options="-parameters" />
+      <module name="scms-kafka-consumer" options="-parameters" />
+      <module name="scms-kafka-producer" options="-parameters" />
       <module name="shiro" options="-parameters" />
       <module name="spring-boot-01" options="-parameters" />
     </option>

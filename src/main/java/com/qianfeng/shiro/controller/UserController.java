@@ -31,4 +31,15 @@ public class UserController {
         return  ResultData.ok().data("field",list);
     }
 
+    @GetMapping("/findRoleByUserId/{id}")
+    public ResultData findRoleByUserId(@PathVariable int id){
+        AclUser aclUser = userService.oneToManyByUser(id);
+        try{
+            System.out.println(aclUser.getRoleList().size());
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return  ResultData.ok().data("field",aclUser);
+    }
 }

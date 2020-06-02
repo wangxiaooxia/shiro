@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qianfeng.shiro.mapper.RoleMapping">
+
+
+    <select id="getRoles"  resultMap="roleResultMap">
+        select * from acl_user_role
+    </select>
+
+    <resultMap id="roleResultMap" type="com.qianfeng.shiro.entity.AclUserRole">
+        <id column="id" property="id" />
+        <result column="roleId" property="role_id"/>
+        <result column="userId" property="user_id"/>
+        <result column="isDeleted" property="is_deleted"/>
+        <result column="gmtCreate" property="gmt_create"/>
+        <result column="gmtModified" property="gmt_modified"/>
+    </resultMap>
+
+</mapper>

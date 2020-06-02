@@ -20,4 +20,8 @@ public class UserService  {
     public List<AclUser> findAll() {
         return userMapper.findAll();
     }
+    public AclUser oneToManyByUser(int id){
+        return userMapper.oneToManyByUser(id);
+    }
+
 }

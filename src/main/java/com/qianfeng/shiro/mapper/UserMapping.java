@@ -10,4 +10,5 @@ import java.util.List;
 public interface UserMapping {
     AclUser Sel(int id);
     List<AclUser> findAll();
+    AclUser oneToManyByUser(int id);
 }

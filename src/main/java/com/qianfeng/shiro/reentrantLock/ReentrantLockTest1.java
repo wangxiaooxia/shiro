@@ -1,6 +1,5 @@
 package com.qianfeng.shiro.reentrantLock;
 
-import ch.qos.logback.core.util.TimeUtil;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Lock;

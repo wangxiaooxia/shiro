@@ -1,11 +1,16 @@
 package com.qianfeng.shiro.entity;
 
 import lombok.Data;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.Date;
+import java.util.List;
 
 @Data
+@Document("acluser" )
 public class AclUser {
+    @Id
     private int id;
     private String username;
     private String password;
@@ -15,5 +20,7 @@ public class AclUser {
     private Integer isDeleted;
     private Date gmtCreate;
     private Date gmtModified;
+
+    private List<AclUserRole>  roleList;
 
 }
