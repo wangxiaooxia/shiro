@@ -224,11 +224,6 @@
             <artifactId>jackson-dataformat-yaml</artifactId>
             <version>2.9.0.pr4</version>
             </dependency>
-        <!--引入kafak和spring整合的jar-->
-        <dependency>
-            <groupId>org.springframework.kafka</groupId>
-            <artifactId>spring-kafka</artifactId>
-            <version>2.2.7.RELEASE</version>
-        </dependency>
+
     </dependencies>
 </project>
