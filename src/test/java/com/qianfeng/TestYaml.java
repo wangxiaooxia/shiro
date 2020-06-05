@@ -78,9 +78,6 @@ public class TestYaml {
         return message;
     }
 
-
-
-
     //yaml 转成json
     public void testYamlToJson (){
         Gson  gs = new Gson();

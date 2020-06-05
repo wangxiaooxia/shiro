@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qianfeng.shiro.mapper.UserMapping">
+
+    <resultMap id="BaseResultMap" type="com.qianfeng.shiro.entity.AclUser">
+        <result column="id" jdbcType= "VARCHAR"  property="id" />
+        <result column="username" jdbcType="VARCHAR" property="username" />
+        <result column="password" jdbcType="VARCHAR" property="password" />
+        <result column="nickname" jdbcType="VARCHAR" property="nick_name" />
+        <result column="salt" jdbcType="VARCHAR" property="salt" />
+        <result column="token" jdbcType="VARCHAR" property="token" />
+        <result column="isDeleted" jdbcType="INTEGER" property="is_deleted" />
+        <result column="gmtCreate" jdbcType="DATE" property="gmt_create" />
+        <result column="gmtModified" jdbcType="DATE" property="gmt_modified" />
+    </resultMap>
+
+    <select id="Sel" resultType="com.qianfeng.shiro.entity.AclUser">
+        select * from acl_user where id = #{id}
+    </select>
+    <select id="findAll" resultType="com.qianfeng.shiro.entity.AclUser">
+        select * from acl_user
+    </select>
+
+
+    <select id="oneToManyByUser" parameterType="int" resultMap="userResultMap">
+        select * FROM acl_user where   id=#{id}
+    </select>
+    <select id="getStudent" parameterType="int" resultMap="roleResultMap">
+        select * from acl_user_role where user_id = #{id}
+    </select>
+
+    <resultMap id="userResultMap" type="com.qianfeng.shiro.entity.AclUser">
+        <result column="id" jdbcType= "VARCHAR"  property="id" />
+        <result column="username" jdbcType="VARCHAR" property="username" />
+        <result column="password" jdbcType="VARCHAR" property="password" />
+        <result column="nickname" jdbcType="VARCHAR" property="nick_name" />
+        <result column="salt" jdbcType="VARCHAR" property="salt" />
+        <result column="token" jdbcType="VARCHAR" property="token" />
+        <result column="isDeleted" jdbcType="INTEGER" property="is_deleted" />
+        <result column="gmtCreate" jdbcType="DATE" property="gmt_create" />
+        <result column="gmtModified" jdbcType="DATE" property="gmt_modified" />
+        <!-- 一对多的关系。使用collection标签
+           * property：指定集合属性的名（User实体类中list集合名）
+           * ofType：指的是集合中元素的值，一般是类的完全限定名
+        -->
+        <collection property="roleList"  ofType="AclUserRole" column="id" select="getStudent" >
+        </collection>
+    </resultMap>
+    <!--可重用的order的resultMap -->
+    <resultMap id="roleResultMap" type="com.qianfeng.shiro.entity.AclUserRole">
+        <id column="id" property="id" />
+        <result column="roleId" property="role_id"/>
+        <result column="userId" property="user_id"/>
+        <result column="isDeleted" property="is_deleted"/>
+        <result column="gmtCreate" property="gmt_create"/>
+        <result column="gmtModified" property="gmt_modified"/>
+    </resultMap>
+</mapper>

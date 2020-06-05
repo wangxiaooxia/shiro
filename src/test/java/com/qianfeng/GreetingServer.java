@@ -49,8 +49,7 @@ public class GreetingServer extends Thread {
         {
             Thread t = new GreetingServer(port);
             t.start();
-        }catch(IOException e)
-        {
+        }catch(IOException e) {
             e.printStackTrace();
         }
     }
