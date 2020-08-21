@@ -2,9 +2,50 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    var  socket;
+    if (window.WebSocket){
+        socket = new WebSocket("ws://localhost:7000/hello");
+        socket.onopen = function (ev) {
+            alert(1)
+            var rt = document.getElementById("responseText");
+            rt.value = "连接开启了。。"
+        };
+
+        socket.message= function (ev) {
+            var rt = document.getElementById("responseText");
+            rt.value = "s";
+        };
+
+        socket.onclose = function (ev) {
+            var rt = document.getElementById("responseText");
+            rt.value = rt.value  +"\n"+ "连接关闭了。。"
+        };
+    } else {
+        alert("当前浏览器不支持")
+    }
+
+    function  send(message) {
+        if (!window.WebSocket){
+            return;
+        }
+        if (socket.readyState == WebSocket.OPEN){
+            socket.send(message)
+        } else  {
+            alert("连接没有开启")
+        }
+    }
+
+</script>
+    <form onsubmit="return false">
+
+        <textarea name = "message" style="height:300px;width: 300px;"></textarea>
+        <input type="button" value="发送消息" onclick="send(this.form.message.value)" />
+        <textarea id="responseText" style="height: 300px;width: 300px;"></textarea>
+        <input type="button" value="情空内容" onclick="document.getElementById('responseText').value = '' "/>
+    </form>
 </body>
 </html>

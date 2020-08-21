@@ -1,4 +1,4 @@
-package com.qianfeng.shiro.netty;
+package com.qianfeng.shiro.netty.simple;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;

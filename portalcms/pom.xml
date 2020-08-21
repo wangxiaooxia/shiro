@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.3.3.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <groupId>com.test</groupId>
+    <artifactId>portalcms</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>portalcms</name>
+    <description>Demo project for Spring Boot</description>
+
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/javax.activation/javax.activation-api -->
+        <dependency>
+            <groupId>javax.activation</groupId>
+            <artifactId>javax.activation-api</artifactId>
+            <version>1.2.0</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/annogen/annogen -->
+        <dependency>
+            <groupId>annogen</groupId>
+            <artifactId>annogen</artifactId>
+            <version>0.1.0</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/aopalliance/aopalliance -->
+        <dependency>
+            <groupId>aopalliance</groupId>
+            <artifactId>aopalliance</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.james/apache-mime4j -->
+        <dependency>
+            <groupId>org.apache.james</groupId>
+            <artifactId>apache-mime4j</artifactId>
+            <version>0.6</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.ow2.asm/asm -->
+        <dependency>
+            <groupId>org.ow2.asm</groupId>
+            <artifactId>asm</artifactId>
+            <version>4.1</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.ws.commons.axiom/axiom-api -->
+        <dependency>
+            <groupId>org.apache.ws.commons.axiom</groupId>
+            <artifactId>axiom-api</artifactId>
+            <version>1.1</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/ws-commons/axiom-impl -->
+        <dependency>
+            <groupId>ws-commons</groupId>
+            <artifactId>axiom-impl</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.axis/axis -->
+        <dependency>
+            <groupId>org.apache.axis</groupId>
+            <artifactId>axis</artifactId>
+            <version>1.4</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/axis2/axis2-adb -->
+        <dependency>
+            <groupId>axis2</groupId>
+            <artifactId>axis2-adb</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/axis2/axis2-codegen -->
+        <dependency>
+            <groupId>axis2</groupId>
+            <artifactId>axis2-codegen</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.axis2.wso2/axis2-jibx -->
+        <dependency>
+            <groupId>org.apache.axis2.wso2</groupId>
+            <artifactId>axis2-jibx</artifactId>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/axis2/axis2-kernel -->
+        <dependency>
+            <groupId>axis2</groupId>
+            <artifactId>axis2-kernel</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/axis2/axis2-tools -->
+        <dependency>
+            <groupId>axis2</groupId>
+            <artifactId>axis2-tools</artifactId>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/axis2/axis2-xmlbeans -->
+        <dependency>
+            <groupId>axis2</groupId>
+            <artifactId>axis2-xmlbeans</artifactId>
+            <version>1.0</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/backport-util-concurrent.wso2/backport-util-concurrent -->
+        <dependency>
+            <groupId>backport-util-concurrent.wso2</groupId>
+            <artifactId>backport-util-concurrent</artifactId>
+            <version>3.1.0.wso2v1</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/cglib/cglib -->
+        <dependency>
+            <groupId>cglib</groupId>
+            <artifactId>cglib</artifactId>
+            <version>2.2</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.poi/com.springsource.org.apache.poi -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>com.springsource.org.apache.poi</artifactId>
+            <version>3.0.2.FINAL</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.aspectj/com.springsource.org.aspectj.weaver -->
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>com.springsource.org.aspectj.weaver</artifactId>
+            <version>1.6.4.RELEASE</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/commons-beanutils.wso2/commons-beanutils -->
+        <dependency>
+            <groupId>commons-beanutils.wso2</groupId>
+            <artifactId>commons-beanutils</artifactId>
+            <version>1.8.0.wso2v1</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/commons-codec.wso2/commons-codec -->
+        <dependency>
+            <groupId>commons-codec.wso2</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>1.3.0.wso2v1</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/commons-collections.wso2/commons-collections -->
+        <dependency>
+            <groupId>commons-collections.wso2</groupId>
+            <artifactId>commons-collections</artifactId>
+            <version>3.1.0.wso2v1</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/commons-discovery/commons-discovery -->
+        <dependency>
+            <groupId>commons-discovery</groupId>
+            <artifactId>commons-discovery</artifactId>
+            <version>0.2</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/commons-fileupload.wso2/commons-fileupload -->
+        <dependency>
+            <groupId>commons-fileupload.wso2</groupId>
+            <artifactId>commons-fileupload</artifactId>
+            <version>1.2.2.wso2v1</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/commons-httpclient.wso2/commons-httpclient -->
+        <dependency>
+            <groupId>commons-httpclient.wso2</groupId>
+            <artifactId>commons-httpclient</artifactId>
+            <version>3.1.0.wso2v1</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-io -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>1.3.2</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/commons-lang/commons-lang -->
+        <dependency>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+            <version>2.3</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/apache-logging/commons-logging -->
+        <dependency>
+            <groupId>apache-logging</groupId>
+            <artifactId>commons-logging</artifactId>
+            <version>1.0.4-jboss</version>
+            <scope>test</scope>
+        </dependency>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.junit.vintage</groupId>
+                    <artifactId>junit-vintage-engine</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

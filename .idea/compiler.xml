@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="kafka-producer" />
+        <module name="portalcms" />
         <module name="shiro" />
       </profile>
     </annotationProcessing>
@@ -24,7 +25,7 @@
       <module name="kafka-producer" options="-parameters" />
       <module name="scms-kafka-consumer" options="-parameters" />
       <module name="scms-kafka-producer" options="-parameters" />
-      <module name="shiro" options="-parameters" />
+      <module name="shiro" options="" />
       <module name="spring-boot-01" options="-parameters" />
     </option>
   </component>

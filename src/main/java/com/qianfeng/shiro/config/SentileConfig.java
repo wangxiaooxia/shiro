@@ -27,7 +27,7 @@ public class SentileConfig {
         List<FlowRule> rules = new ArrayList<FlowRule>();
         rules.add(rule1);
 
-        // 将控制规则载入到 Sentinel
         com.alibaba.csp.sentinel.slots.block.flow.FlowRuleManager.loadRules(rules);
-    }
+    }        // 将控制规则载入到 Sentinel
+
 }

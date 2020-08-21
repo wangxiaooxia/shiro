@@ -1,4 +1,4 @@
-package com.qianfeng.shiro.netty.tcp;
+package com.qianfeng.shiro.netty.protocoltcp;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;

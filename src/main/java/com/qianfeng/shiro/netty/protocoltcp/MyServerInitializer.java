@@ -1,4 +1,4 @@
-package com.qianfeng.shiro.netty.tcp;
+package com.qianfeng.shiro.netty.protocoltcp;
 
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
@@ -8,6 +8,7 @@ public class MyServerInitializer extends ChannelInitializer<SocketChannel> {
     @Override
     protected void initChannel(SocketChannel ch) {
         ChannelPipeline pipeline = ch.pipeline();
+        pipeline.addLast(new MyMessageDecoder());
         pipeline.addLast(new MyServerHandler());
 
     }

@@ -1,4 +1,4 @@
-package com.qianfeng.shiro.netty.inboundhandlerandoutbandler;
+package com.qianfeng.shiro.netty.tcp;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
@@ -18,8 +18,6 @@ public class MyClient {
             .handler(new MyClientInitializer());
             ChannelFuture channelFutrue = bootstrap.connect("127.0.0.1", 7000);
             channelFutrue.channel().closeFuture().sync();
-
-
         }finally {
             eventExecutors.shutdownGracefully();
         }
