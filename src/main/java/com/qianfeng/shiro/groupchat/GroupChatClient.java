@@ -17,7 +17,7 @@ public class GroupChatClient {
     private String username;
 
     public GroupChatClient () throws Exception{
-         selector = Selector.open();
+        selector = Selector.open();
         socketChannel = socketChannel.open(new InetSocketAddress(HOST,PORT));
         socketChannel.configureBlocking(false);
         socketChannel.register(selector, SelectionKey.OP_READ);

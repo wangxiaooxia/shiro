@@ -8,7 +8,7 @@ import java.util.Date;
 import java.util.List;
 
 @Data
-@Document("acluser" )
+@Document("acl_user" )
 public class AclUser {
     @Id
     private int id;

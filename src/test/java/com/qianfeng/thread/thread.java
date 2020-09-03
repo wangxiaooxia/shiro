@@ -9,6 +9,9 @@ public class thread {
         for (int i = 0; i < 5 ; i++) {
             executorService.execute(new TestNewRunable());
         }
+
+        Thread thread = new Thread(new TestNewRunable());
+        thread.start();
     }
 }
 class TestNewRunable implements Runnable {

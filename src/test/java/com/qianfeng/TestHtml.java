@@ -1,7 +1,6 @@
 package com.qianfeng;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
-import org.jsoup.select.Elements;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -10,7 +9,8 @@ public class TestHtml {
     public static String readHtml(String path) {
         StringBuffer buff = new StringBuffer();
         // 建立一个对象，它把文件内容转成计算机能读懂的语言
-        try (FileReader reader = new FileReader(path); BufferedReader br = new BufferedReader(reader)) {
+        try (FileReader reader = new FileReader(path);
+             BufferedReader br = new BufferedReader(reader)) {
             String line;
             int count = 0;
             while ((line = br.readLine()) != null) {

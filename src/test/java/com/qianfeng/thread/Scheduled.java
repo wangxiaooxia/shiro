@@ -17,3 +17,8 @@ public class Scheduled {
 
     }
 }
+class Tets extends Thread{
+    public void  run(){
+        System.out.println("dfdfdf");
+    }
+}

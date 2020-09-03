@@ -30,5 +30,7 @@ public class RedisServiceImpl implements RedisService {
     @Override
     public void removeDL() {
         redisTemplate.opsForList().rightPop("Test");
+        redisTemplate.opsForList();
     }
+
 }
