@@ -18,7 +18,7 @@ public class UserController {
 
     @Autowired
     private UserService userService;
-    @GetMapping("/sel/{id}")
+        @GetMapping("/sel/{id}")
     @SentinelResource(value = "sel",blockHandler = "findAll")
     public AclUser sel(@PathVariable int id){
         AclUser user = userService.Sel(id);

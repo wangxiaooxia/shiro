@@ -8,8 +8,11 @@
     <!--<groupId>org.example</groupId>-->
 
     <artifactId>shiro</artifactId>
-    <packaging>jar</packaging> <!-- 当启动的是自己本身的时候，不能用pom，应该用jar -->
+    <packaging>pom</packaging> <!-- 当启动的是自己本身的时候，不能用pom，应该用jar -->
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>nacos</module>
+    </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
